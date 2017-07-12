@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LLPShreListViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="230" height="335"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="230" height="335"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xiaoxiao" translatesAutoresizingMaskIntoConstraints="NO" id="5Bv-Ok-f9i">
+                        <rect key="frame" x="0.0" y="0.0" width="230" height="335"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6.1k 播放" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaX-4S-aZE">
+                        <rect key="frame" x="165.5" y="15" width="54.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="430" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Suz-lO-y51">
+                        <rect key="frame" x="195.5" y="304" width="24.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5月5日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgB-uB-LPI">
+                        <rect key="frame" x="10" y="304" width="42.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like_count_icon" translatesAutoresizingMaskIntoConstraints="NO" id="noG-3Y-90A">
+                        <rect key="frame" x="162.5" y="300.5" width="23" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="GXh-vg-4Ja"/>
+                            <constraint firstAttribute="width" constant="23" id="cCm-oM-XtZ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大爱我的逼格..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THR-ad-Ax9">
+                        <rect key="frame" x="10" y="277" width="150" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="88q-bi-rgu"/>
+                            <constraint firstAttribute="width" constant="150" id="uho-zo-haB"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="5Bv-Ok-f9i" secondAttribute="bottom" id="0x2-Kd-JwO"/>
+                <constraint firstAttribute="trailing" secondItem="RaX-4S-aZE" secondAttribute="trailing" constant="10" id="FzW-Va-bmU"/>
+                <constraint firstItem="VgB-uB-LPI" firstAttribute="top" secondItem="THR-ad-Ax9" secondAttribute="bottom" constant="10" id="I50-Jb-sQN"/>
+                <constraint firstAttribute="bottom" secondItem="Suz-lO-y51" secondAttribute="bottom" constant="15" id="Lw8-ll-ZA5"/>
+                <constraint firstAttribute="bottom" secondItem="VgB-uB-LPI" secondAttribute="bottom" constant="15" id="N1s-Wh-Rnk"/>
+                <constraint firstItem="Suz-lO-y51" firstAttribute="leading" secondItem="noG-3Y-90A" secondAttribute="trailing" constant="10" id="SKw-PV-Awm"/>
+                <constraint firstItem="VgB-uB-LPI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="UVx-q1-fje"/>
+                <constraint firstItem="Suz-lO-y51" firstAttribute="centerY" secondItem="noG-3Y-90A" secondAttribute="centerY" id="Wec-Wk-plk"/>
+                <constraint firstAttribute="trailing" secondItem="Suz-lO-y51" secondAttribute="trailing" constant="10" id="e4y-LJ-tdw"/>
+                <constraint firstAttribute="trailing" secondItem="5Bv-Ok-f9i" secondAttribute="trailing" id="fUC-Zi-rHO"/>
+                <constraint firstItem="RaX-4S-aZE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="iSn-Uv-YCE"/>
+                <constraint firstItem="5Bv-Ok-f9i" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qG0-iy-0oN"/>
+                <constraint firstItem="5Bv-Ok-f9i" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="x4v-t9-4yS"/>
+                <constraint firstItem="THR-ad-Ax9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="yeE-U8-UnC"/>
+            </constraints>
+            <size key="customSize" width="230" height="335"/>
+            <connections>
+                <outlet property="shareBg" destination="5Bv-Ok-f9i" id="nF4-ri-7DH"/>
+                <outlet property="shareShowCount" destination="RaX-4S-aZE" id="U8t-Nd-7Wh"/>
+                <outlet property="shreDes" destination="THR-ad-Ax9" id="yeg-pF-JyO"/>
+                <outlet property="shreLikeNum" destination="Suz-lO-y51" id="M7e-qd-og5"/>
+                <outlet property="shreTime" destination="VgB-uB-LPI" id="S0z-m4-Gv5"/>
+            </connections>
+            <point key="canvasLocation" x="-124" y="8.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="like_count_icon" width="15" height="15"/>
+        <image name="xiaoxiao" width="480" height="640"/>
+    </resources>
+</document>
