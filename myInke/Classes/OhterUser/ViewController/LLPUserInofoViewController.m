@@ -14,7 +14,8 @@
 #import "LLPFollowInfo.h"
 #import "LLPShreListViewCell.h"
 #import "LLPFeedsInfo.h"
-
+#import "LLPFocusDirectMessages.h"
+#import "LLPDiamondInfo.h"
 
 #define BGHEIGHT SCREEN_WIDTH*0.87
 static NSString *identifier = @"LLPMeifoTableViewCell";
@@ -28,7 +29,7 @@ static NSString *identifier2 = @"LLPShreListViewCell";
 @property (nonatomic,strong) LLPUserInfo* infoData;
 @property (nonatomic,strong) UICollectionView * collectionView;
 @property (nonatomic,assign) NSInteger collectionHeight;
-
+@property (nonatomic,strong) UIView* bottomView;
 @end
 
 @implementation LLPUserInofoViewController
@@ -84,7 +85,16 @@ static NSString *identifier2 = @"LLPShreListViewCell";
             [self.navigationController popViewControllerAnimated:YES];
         }];
         
-
+        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
+               [NSString stringWithFormat:@"%d",(int)self.infoData.idField],@"id",
+               USER_ID,@"uid",nil];
+        
+        [LLPOtherUserInfoHandler executeGetOtherUserDiamondInfoTaskWithParams:dic Success:^(id obj) {
+            LLPDiamondInfo * d = (LLPDiamondInfo*)obj;
+            _infoView.goldNum.text = [NSString stringWithFormat:@"%d",(int)d.gold];
+        } filed:^(id obj) {
+            _infoView.goldNum.text = 0;
+        }];
     }
     return _infoView;
 }
@@ -175,6 +185,10 @@ static NSString *identifier2 = @"LLPShreListViewCell";
     [NSTimer scheduledTimerWithTimeInterval:0.1 block:^(NSTimer * _Nonnull timer) {
         self.tableView.tableHeaderView = self.infoView;
         
+        self.bottomView = [[LLPFocusDirectMessages alloc] init];
+        self.bottomView.frame = CGRectMake(0, SCREEN_HEIGHT-50, SCREEN_WIDTH, 50);
+        [self.view addSubview:self.bottomView];
+        
         //滑动列表，顶部头像的拉伸[backgroundView]
         self.tableView.backgroundView = [[UIView alloc] init];
         self.imageVC = [[UIImageView alloc] init];
@@ -219,17 +233,6 @@ static NSString *identifier2 = @"LLPShreListViewCell";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     
-    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT-50, SCREEN_WIDTH, 50)];
-    bottomView.backgroundColor = [UIColor redColor];
-    
-    [self.view addSubview:bottomView];
-    [self.tableView.backgroundView bringSubviewToFront:bottomView];
-    
-//    [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self.view).with.offset(0);
-//        make.right.equalTo(self.view).with.offset(0);
-//    }];
-//    
     [self infoViewCell];
 }
 
@@ -302,12 +305,16 @@ static NSString *identifier2 = @"LLPShreListViewCell";
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+    
     CGFloat contentOffSet = scrollView.contentOffset.y;
     CGRect oldFream = self.imageVC.frame;
     if(contentOffSet <= BGHEIGHT){
         oldFream.size.height = BGHEIGHT-contentOffSet;
         self.imageVC.frame = oldFream;
     }
+    self.bottomView.frame = CGRectMake(0, SCREEN_HEIGHT-50+contentOffSet, SCREEN_WIDTH, 50);
+    
 }
 
 -(void)userInfoData:(LLPUserInfo *)info{

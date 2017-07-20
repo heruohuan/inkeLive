@@ -93,6 +93,8 @@
 		FBA2B55A1EE40003003FEC4A /* LLPVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBA2B5581EE40003003FEC4A /* LLPVideoViewController.xib */; };
 		FBBD2F691EF50D3200B0C9B8 /* LLPRecordViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBD2F671EF50D3200B0C9B8 /* LLPRecordViewCell.m */; };
 		FBBD2F6A1EF50D3200B0C9B8 /* LLPRecordViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBBD2F681EF50D3200B0C9B8 /* LLPRecordViewCell.xib */; };
+		FBD111291F1C2FD200F4F974 /* LLPFocusDirectMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD111281F1C2FD200F4F974 /* LLPFocusDirectMessages.m */; };
+		FBD1112B1F1C2FE200F4F974 /* LLPFocusDirectMessages.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBD1112A1F1C2FE200F4F974 /* LLPFocusDirectMessages.xib */; };
 		FBDA764C1F0C6498009FF9BE /* LLPBillboardUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA764B1F0C6498009FF9BE /* LLPBillboardUserInfo.m */; };
 		FBDA764F1F0C685E009FF9BE /* LLPWeiboInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA764E1F0C685E009FF9BE /* LLPWeiboInfo.m */; };
 		FBDA76521F0C6C16009FF9BE /* LLPDiamondInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDA76511F0C6C16009FF9BE /* LLPDiamondInfo.m */; };
@@ -249,6 +251,9 @@
 		FBBD2F661EF50D3200B0C9B8 /* LLPRecordViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPRecordViewCell.h; sourceTree = "<group>"; };
 		FBBD2F671EF50D3200B0C9B8 /* LLPRecordViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLPRecordViewCell.m; sourceTree = "<group>"; };
 		FBBD2F681EF50D3200B0C9B8 /* LLPRecordViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLPRecordViewCell.xib; sourceTree = "<group>"; };
+		FBD111271F1C2FD200F4F974 /* LLPFocusDirectMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPFocusDirectMessages.h; sourceTree = "<group>"; };
+		FBD111281F1C2FD200F4F974 /* LLPFocusDirectMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLPFocusDirectMessages.m; sourceTree = "<group>"; };
+		FBD1112A1F1C2FE200F4F974 /* LLPFocusDirectMessages.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLPFocusDirectMessages.xib; sourceTree = "<group>"; };
 		FBDA764A1F0C6498009FF9BE /* LLPBillboardUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPBillboardUserInfo.h; sourceTree = "<group>"; };
 		FBDA764B1F0C6498009FF9BE /* LLPBillboardUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLPBillboardUserInfo.m; sourceTree = "<group>"; };
 		FBDA764D1F0C685E009FF9BE /* LLPWeiboInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPWeiboInfo.h; sourceTree = "<group>"; };
@@ -759,6 +764,9 @@
 				FB4064DB1F11A8E000D08E41 /* LLPShreListViewCell.h */,
 				FB4064DC1F11A8E000D08E41 /* LLPShreListViewCell.m */,
 				FB4064DD1F11A8E000D08E41 /* LLPShreListViewCell.xib */,
+				FBD111271F1C2FD200F4F974 /* LLPFocusDirectMessages.h */,
+				FBD111281F1C2FD200F4F974 /* LLPFocusDirectMessages.m */,
+				FBD1112A1F1C2FE200F4F974 /* LLPFocusDirectMessages.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -858,6 +866,7 @@
 				FB432DA11EBDB6090074BEF1 /* LLPNearViewController.xib in Resources */,
 				FBA2B54D1EE3DF47003FEC4A /* LLPApproveViewController.xib in Resources */,
 				FBA2B5481EE3DF0B003FEC4A /* LLPLevelViewController.xib in Resources */,
+				FBD1112B1F1C2FE200F4F974 /* LLPFocusDirectMessages.xib in Resources */,
 				FB568A381EDB1D21004F0B7E /* LLPLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -959,6 +968,7 @@
 				FB68E1791EC547BE00A1CE7C /* LLPLocationManager.m in Sources */,
 				FBF926C51ED66273000DDF6B /* LLPAdvertiseView.m in Sources */,
 				FBF926BE1ED3BDC1000DDF6B /* LLPNearLiveCell.m in Sources */,
+				FBD111291F1C2FD200F4F974 /* LLPFocusDirectMessages.m in Sources */,
 				FB2A96C51EF0C9E000B6903C /* LLPRecordHandler.m in Sources */,
 				FBA2B53D1EE3DEB9003FEC4A /* LLPEarningsViewController.m in Sources */,
 				FBA2B5511EE3DF7F003FEC4A /* LLPSettingViewController.m in Sources */,

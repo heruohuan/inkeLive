@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LLPFocusDirectMessages">
+            <rect key="frame" x="0.0" y="0.0" width="431" height="74"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfa-6g-K2f">
+                    <rect key="frame" x="0.0" y="0.0" width="215" height="74"/>
+                    <state key="normal" title=" 关注" image="follower_normal">
+                        <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbA-Sc-MFV">
+                    <rect key="frame" x="216" y="0.0" width="215" height="74"/>
+                    <state key="normal" title=" 私信" image="chat">
+                        <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7U-VP-PlJ">
+                    <rect key="frame" x="215" y="24.5" width="1" height="25"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="cI8-kX-6se"/>
+                        <constraint firstAttribute="height" constant="25" id="f3o-3n-uz9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YbA-Sc-MFV" firstAttribute="leading" secondItem="h7U-VP-PlJ" secondAttribute="trailing" id="2LY-Ec-VR5"/>
+                <constraint firstAttribute="bottom" secondItem="YbA-Sc-MFV" secondAttribute="bottom" id="6A4-sL-m35"/>
+                <constraint firstAttribute="trailing" secondItem="YbA-Sc-MFV" secondAttribute="trailing" id="BtQ-zq-seP"/>
+                <constraint firstAttribute="bottom" secondItem="cfa-6g-K2f" secondAttribute="bottom" id="CGb-JU-gdv"/>
+                <constraint firstItem="h7U-VP-PlJ" firstAttribute="leading" secondItem="cfa-6g-K2f" secondAttribute="trailing" id="Dgw-zA-pDE"/>
+                <constraint firstItem="cfa-6g-K2f" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HNi-AB-e6R"/>
+                <constraint firstItem="YbA-Sc-MFV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OKd-UO-eYH"/>
+                <constraint firstItem="cfa-6g-K2f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Qa1-Pm-jzn"/>
+                <constraint firstItem="h7U-VP-PlJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="f74-jX-W8F"/>
+                <constraint firstItem="h7U-VP-PlJ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xkd-HY-CfI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="focusBtn" destination="cfa-6g-K2f" id="irB-4l-hT5"/>
+                <outlet property="messagesBtn" destination="YbA-Sc-MFV" id="wxM-IN-cnS"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="-242"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chat" width="24" height="24"/>
+        <image name="follower_normal" width="24" height="24"/>
+    </resources>
+</document>

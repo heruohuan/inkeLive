@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *sexImage;
 @property (weak, nonatomic) IBOutlet UIImageView *certificationIcon;
 @property (weak, nonatomic) IBOutlet UILabel *certificationDes;
+@property (weak, nonatomic) IBOutlet UILabel *goldNum;
 
 
 +(instancetype) loadInfoView;
